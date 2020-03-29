@@ -296,8 +296,7 @@ for email in open(list, 'r'):
 		hotmail.write(email + '\n')
 		hotmail.close()
 		print '[HOTMAIL] ',email
-	else:
-		others = open('others.txt','a+')
+	else:   others = open('others.txt','a+')
 		others.write(email + '\n')
 		others.close()
 		print '[OTHERS] ',email
