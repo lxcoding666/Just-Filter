@@ -291,12 +291,28 @@ for email in open(list, 'r'):
 		wanadoo.write(email + '\n')
 		wanadoo.close()
 		print '[WANADO NET] ',email
-	elif ('@hotmail.com') or ('@live') or '@outlook.com' or ('@msn.com') in email:
+	elif '@hotmail.com'  in email:
 		hotmail = open('hotmail.com.txt','a+')
 		hotmail.write(email + '\n')
 		hotmail.close()
 		print '[HOTMAIL] ',email
-	else:   others = open('others.txt','a+')
+	elif '@live' in email:
+		live = open('live.com.txt','a+')
+		live.write(email + '\n')
+		live.close()
+		print '[LIVE.COM] ',email
+	elif '@outlook.com' in email:
+		outlook = open('outlook.txt','a+')
+		outlook.write(email + '\n')
+		outlook.close()
+		print '[OUTLOOK] ',email
+	elif '@msn.com' in email:
+		msn = open('msn.com.txt','a+')
+		msn.write(email + '\n')
+		msn.close()
+		print '[MSN] ',email
+	else:
+		others = open('others.txt','a+')
 		others.write(email + '\n')
 		others.close()
 		print '[OTHERS] ',email
